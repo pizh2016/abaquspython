@@ -4,24 +4,36 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "python2.7",
-            "type": "process",
-            "windows": {
-                "command": "D:\\ProgramData\\python27\\python.exe"
-            },
-            "args": [
-                "${file}"
-            ],
+            "label": "Abaqus python",
+            "type": "shell",
+            "command": "abaqus",
+            "args": ["python","${file}"],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": true,
-                "panel": "shared"
-            },
-        }
+            }
+        },
+
+        {
+            "label": "Abaqus CAE noGUI",
+            "type": "shell",
+            "command": "abaqus",
+            "args": ["cae","noGUI=${file}"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+
+        {
+            "label": "Abaqus CAE",
+            "type": "shell",
+            "command": "abaqus",
+            "args": ["cae","script=${file}"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
     ]
 }
