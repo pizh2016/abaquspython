@@ -31,49 +31,30 @@ sys.path.append('C:\Program Files\Dassault ystemes\SimulationServices\V6R2017x\w
 受限于ABAQUS 的 license 机制，第三方IDE直接调试带有abaqus python的脚本是不行的，而命令行abaqus cae noGUI 和 abaqus python却能使用，把它设置为vscode的python.pythonpath，并且在task.json文件中新增task，"command"设置为"abaqus"，"args"中添加相应的指令即可。
 
 """
-
-"tasks": [
-
+"tasks": 
+   [ 
+   
         {
-        
             "label": "Abaqus python",
-            
             "type": "shell",
-            
             "command": "abaqus",
-            
-            "args": ["python","${file}"],
-            
+            "args": ["python","${file}"], 
             "group": {
-            
-                "kind": "build",
-                
-                "isDefault": true
-                
+                "kind": "build",  
+                "isDefault": true  
             }
-            
         },
-        
+
         {
-        
             "label": "Abaqus CAE",
-            
             "type": "shell",
-            
             "command": "abaqus",
-            
             "args": ["cae","script=${file}"],
-            
             "group": {
-            
                 "kind": "build",
-                
-                "isDefault": true
-                
+                "isDefault": true  
             }
-            
         },
-        
     ]
     
 """
