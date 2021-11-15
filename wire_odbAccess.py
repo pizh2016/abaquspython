@@ -5,8 +5,8 @@ nside = [2,2,2]
 lside = 10
 structureType=3
 
-# Z_list = [1.0, 1.1, 1.2, 1.3, 1.4, 1.5]
-Z_list = [1.0]
+Z_list = [1.0, 1.1, 1.2, 1.3]
+# Z_list = [1.0]
 OutList = []
 for z_scale in Z_list:
     odbname = 'data/wire-compress-Type{:d}-H{:d}.odb'.format(structureType,int(z_scale*10))
