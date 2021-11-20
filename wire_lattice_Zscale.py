@@ -55,8 +55,7 @@ for z_scale, rc in zip(Z_list,R_list):
         integration=DURING_ANALYSIS, poissonRatio=0.0, profile='Profile-{:d}'.format(int(z_scale*10)), 
         material='Material-1', temperatureVar=LINEAR, consistentMassMatrix=False)
     part1.SectionAssignment(region=part1.sets['Set-1'], sectionName='Section-{:d}'.format(int(z_scale*10)), offset=0.0, 
-        offsetType=MIDDLE_SURFACE, offsetField='', 
-        thicknessAssignment=FROM_SECTION)
+        offsetType=MIDDLE_SURFACE, offsetField='', thicknessAssignment=FROM_SECTION)
     part1.assignBeamSectionOrientation(region=part1.sets['Set-1'], method=N1_COSINES, n1=(0.0, 0.0, -1.0))
     part1.seedPart(size=0.5, deviationFactor=0.1, minSizeFactor=0.1)
     part1.generateMesh()
