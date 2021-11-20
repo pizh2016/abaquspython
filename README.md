@@ -19,7 +19,7 @@ import sys
 
 sys.path.append('C:\ProgramData\python27\Lib\site-packages')
 
-sys.path.append('C:\Program Files\Dassault ystemes\SimulationServices\V6R2017x\win_b64\code\python2.7\lib')
+sys.path.append('C:\Program Files\Dassault systemes\SimulationServices\V6R2017x\win_b64\code\python2.7\lib')
 
 """
 
@@ -60,9 +60,13 @@ sys.path.append('C:\Program Files\Dassault ystemes\SimulationServices\V6R2017x\w
 """
 
 
-# 测试
+# 模块测试
 
 "wire_lattice_Zscale.py" 用CAE生成基于wire的梁单元模型，使用命令 "abaqus cae script=wire_lattice_Zscale.py"(ctrl + shift + B 运行 task，选择 Abaqus CAE )
 
 "wire_odbAccess.py" 查看ODB的historyOutputs，使用命令 "abaqus python wire_odbAccess.py" (ctrl + shift + B 运行 task，选择 Abaqus python )
+
+"additive_manufacturing_ModelChange.py" 使用生死单元法ModelChange模拟增材制造过程的热固耦合仿真
+
+"additive_manufacturing_Partition_ModelChange.py" 使用生死单元法ModelChange模拟增材制造过程的热固耦合仿真，采用Partition方式分组
 
